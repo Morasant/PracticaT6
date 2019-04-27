@@ -26,15 +26,15 @@ public class Coche {
 		switch (combustible) {
 		case "Gasolina": 
 			resultado += texto + matricula + " ";
-			resultado += ConsumoCocheA(modelo, fabricante);
+			resultado += ConsumoCocheA("Corsa", "Opel");
 			break;
 		case "Diesel":
 			resultado += texto + matricula + " ";
-			resultado += ConsumoCocheB(modelo, fabricante);
+			resultado += ConsumoCocheB("Ibiza", "Seat");
 			break;
 		case "Híbrido":
 			resultado += texto + matricula + " ";
-			resultado += ConsumoCocheC(modelo, fabricante);
+			resultado += ConsumoCocheC("Getz", "Hyundai");
 			break;
 		default:
 			resultado += texto + matricula + " ";
@@ -43,4 +43,23 @@ public class Coche {
 		}
 		return resultado;
 	}
+	
+	public String ConsumoCocheA(String modelo, String fabricante) {
+		String resultado = "";
+		resultado = "es un " + fabricante + modelo + " y gasta 1,337 euros por litro";
+		return resultado;	
+	}
+	
+	public String ConsumoCocheB(String modelo, String fabricante) {
+		String resultado = "";
+		resultado = "es un " + fabricante + modelo + " y gasta 1,052 euros por litro";
+		return resultado; 
+	}
+	
+	public String ConsumoCocheC(String modelo, String fabricante) {
+		String resultado = "";
+		resultado = "es un " + fabricante + modelo + " y no necesita combustible";
+		return resultado;
+	}
+	
 }
