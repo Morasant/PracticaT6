@@ -68,13 +68,13 @@ public class Coche {
 		String texto = "El coche con matricula ";
 		switch (combustible) {
 		case "Gasolina": 
-			resultado = texto + matricula + " " + ConsumoCocheA("Corsa", "Opel");
+			resultado = texto + matricula + " " + ConsumoCocheA(modelo, fabricante);
 			break;
 		case "Diesel":
-			resultado = texto + matricula + " " + ConsumoCocheB("Ibiza", "Seat");
+			resultado = texto + matricula + " " + ConsumoCocheB(modelo, fabricante);
 			break;
 		case "Híbrido":
-			resultado = texto + matricula + " " + ConsumoCocheC("Getz", "Hyundai");
+			resultado = texto + matricula + " " + ConsumoCocheC(modelo, fabricante);
 			break;
 		default:
 			resultado = texto + matricula + " " + "no dispone de información";
