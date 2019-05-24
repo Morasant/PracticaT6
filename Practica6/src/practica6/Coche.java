@@ -8,6 +8,11 @@ package practica6;
 	 * @version 2.0
 	 */
 public class Coche {
+	
+	private static final String TEXT = "es un ";
+	
+	private String resultado;
+	
 	/**
 	 * Matrícula del coche
 	 */
@@ -59,24 +64,20 @@ public class Coche {
 	 * 		   </ul>
 	 */
 	public String AtributosCoche() {
-		String resultado = "";
+
 		String texto = "El coche con matricula ";
 		switch (combustible) {
 		case "Gasolina": 
-			resultado += texto + matricula + " ";
-			resultado += ConsumoCocheA("Corsa", "Opel");
+			resultado = texto + matricula + " " + ConsumoCocheA("Corsa", "Opel");
 			break;
 		case "Diesel":
-			resultado += texto + matricula + " ";
-			resultado += ConsumoCocheB("Ibiza", "Seat");
+			resultado = texto + matricula + " " + ConsumoCocheB("Ibiza", "Seat");
 			break;
 		case "Híbrido":
-			resultado += texto + matricula + " ";
-			resultado += ConsumoCocheC("Getz", "Hyundai");
+			resultado = texto + matricula + " " + ConsumoCocheC("Getz", "Hyundai");
 			break;
 		default:
-			resultado += texto + matricula + " ";
-			resultado += "no dispone de información";
+			resultado = texto + matricula + " " + "no dispone de información";
 			break;
 		}
 		return resultado;
@@ -89,8 +90,9 @@ public class Coche {
 	 * @return <p>"es un " + fabricante + modelo + " y gasta 1,337 euros por litro"</p>
 	 */
 	public String ConsumoCocheA(String modelo, String fabricante) {
-		String resultado = "";
-		resultado = "es un " + fabricante + modelo + " y gasta 1,337 euros por litro";
+		
+		resultado = TEXT + fabricante + modelo + " y gasta 1,337 euros por litro";
+		
 		return resultado;	
 	}
 	/**
@@ -101,8 +103,9 @@ public class Coche {
 	 * @return <p>"es un " + fabricante + modelo + " y gasta 1,052 euros por litro"</p>
 	 */
 	public String ConsumoCocheB(String modelo, String fabricante) {
-		String resultado = "";
-		resultado = "es un " + fabricante + modelo + " y gasta 1,052 euros por litro";
+
+		resultado = TEXT + fabricante + modelo + " y gasta 1,052 euros por litro";
+		
 		return resultado; 
 	}
 	/**
@@ -113,8 +116,9 @@ public class Coche {
 	 * @return <p>"es un " + fabricante + modelo + " y no necesita combustible"</p>
 	 */
 	public String ConsumoCocheC(String modelo, String fabricante) {
-		String resultado = "";
-		resultado = "es un " + fabricante + modelo + " y no necesita combustible";
+
+		resultado = TEXT + fabricante + modelo + " y no necesita combustible";
+		
 		return resultado;
 	}
 	
